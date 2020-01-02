@@ -2,7 +2,7 @@ import React from 'react';
 
 function Header (){
 return (
-<header class="App-header">
+<header className="App-header">
     <h1>Trelloyes!</h1>
   </header>
 );

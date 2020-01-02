@@ -5,18 +5,21 @@ import '../list.css'
 function Lists(props){
     return (
        
-        <section class="List">
-          <header class="List-header">
+        <section className="List">
+          <header className="List-header">
             <h2>{props.header}</h2>
           </header>
-          <div class="List-cards">
+          <div className="List-cards">
             {props.cards.map((card) =>
                  <Card 
+                 onDeleteItem = {props.onDeleteItem}
+                    number={card.id}
                     key={card.id}
                     title={card.title}
                     content={card.content}
                  />
                 )}
+                <button onClick = {props.onRandomCard}>add random card</button>
               </div>
               </section>
        
